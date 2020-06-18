@@ -48,12 +48,21 @@ $(".interest").click(function(e){
         interest=0.35;
     }
     var amount=parseInt(amt.val())
+    if(isNaN(amount)){
+        $(".alert").removeClass("hidden");
+    }
+    else{
     gain=(days/365)*interest*amount;
     $(".output").removeClass("hidden");
-    $("#interest1").text(gain);
+    $("#interest1").text(gain.toFixed(3));
     $("#amount1").text(amount);
+    $("#invest").text(amount);}
 });
 
 $("#cancel").click(function(e){
     $(".output").addClass("hidden");
+})
+
+$("#amount").click(function(e){
+    $(".alert").addClass("hidden");
 })
