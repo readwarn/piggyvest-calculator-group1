@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="calc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+      <div class="w-5/12 p-5 output text-center mx-auto hidden">
+           <img src="./assets/logo.png" alt="logo" class="h-16 mx-auto">
+           <div class="disp">
+               <i class="fa fa-times fa-2x ml-auto" id="cancel"></i>
+                <div>
+                <p>You get an interest of</p>
+                <h1 id="interest1" class="font-semibold text-3xl mt-5"></h1>
+                <p>by</p>
+                <h1 id="date1" class="font-semibold text-3xl mb-5"></h1>
+                </div>
+                <div class="btn">
+                    <button type="button"> SAFE LOCK #<span id="amount1"></span> NOW</button>
+                </div>
+           </div>
+      </div>
+  <nav class="flex flex-col items-left justify-between border lg:flex-row px-5 py-3 md:py-0 md:px-10 lg:px-16">
+      <div class="flex mr-6 justify-between w-full lg:w-auto items-center">
+        <img src="logo.png" alt="logo" class="logo h-12 md:h-16">
+        <div class="close lg:hidden">
+            <div class="l1"></div>
+            <div class="l2"></div>
+            <div class="l3"></div>
+        </div>
+      </div>
+     <div class="hidden lg:flex lg:items-center lg:w-auto collapse p-4">
+        <div class="lg:flex-grow">
+            <a href="#" class="block mt-4 lg:inline-block lg:mt-0  hover:text-green-400 mr-4">About</a>
+            <a href="#" class="block mt-4 lg:inline-block lg:mt-0  hover:text-green-400 mr-4">Stories</a>
+            <a href="#" class="block mt-4 lg:inline-block lg:mt-0  hover:text-green-400 mr-4"> FAQ</a>
+            <a href="#" class="block mt-4 lg:inline-block lg:mt-0  hover:text-green-400 mr-4">Blog</a>
+            <a href="#" class="block mt-4 lg:inline-block lg:mt-0  hover:text-green-400">Log in</a>
+            <a href="#" class="hidden lg:inline-block leading-none mt-4 lg:mt-0 lg:ml-5 rounded-md account">Create a free account</a>
+        </div>
+     </div>
+  </nav>
+
+  <div class="contain px-5 md:px-10 lg:px-16">
+        <h3 class="md:w-7/12 lg:w-5/12 mb-5">Estimate your investment growth over time</h3>
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-5/12 mb-10 md:mb-0 img-cont"></div>
+            <div class="w-full md:w-6/12 md:ml-auto">
+               <label for="amount" class="block">Amount to lock/Invest</label>
+               <input type="text" id="amount" placeholder="2500">
+               <label for="Title" class="block mt-5">Title of SafeLock</label>
+               <input type="text" id="Title">
+               <label for="Payback" class="block mt-5">Set Payback Date</label>
+               <input type="date" value="2020-06-18" id="payback">
+               <label for="Source" class="block mt-5">Source of funds</label>
+               <div class="flex justify-between items-center source">
+                <input type="text" id="Source" class="src">
+                <i class="fa fa-angle-down"></i>
+               </div>
+               <div class="dropdown hidden">
+                   <p class="fund">Select a Funding Source</p>
+                   <p class="card">Use bank card***** 6755</p>
+                   <p class="wallet">Use PiggyFlex Wallet</p>
+               </div>
+               <div class="flex mt-5">
+               <button class="interest">CALCULATE INTEREST</button>
+               </div>
+            </div>
+        </div>
+        <h3 class="text-center mt-20">How does the calculator works</h3>
+        <div class="flex flex-col md:flex-row mt-16">
+            <div class="w-full md:w-5/12 mb-10 md:mb-0 img-cont1"></div>
+            <div class="w-full md:w-6/12 md:ml-auto">
+              <p>Use our "SafeLock" feature to lock funds away so you don't have access until your set date. You also earn over 13% p.a.</p>
+              <button class="acct">Create a free account</button>
+            </div>
+        </div>
+        <h3 class="text-center mt-20">Over ₦1,000,000,000 securely saved every month</h3>
+        <p class="w-10/12 text-center mx-auto mt-3">PiggyVest uses bank-level security measures to keep your data safe.<br/> PiggyVest users save & invest well over a billion every single month, and they are just getting started.</p>
+        <div class="flex">
+            <button class="acct2 mx-auto">Create a free account</button>
+        </div>
+        <div class="store flex justify-center">
+           <div class="mr-3"><img src="appstore.png" alt="appstore" class="object-cover"></div>
+           <div><img src="googleplay.png" alt="googleplay" class="object-cover"></div>
+        </div>
+   </div>
+     <div class="footer px-5 md:px-10 lg:px-16 flex flex-col md:flex-row">
+         <div class="flex flex-col w-full md:w-8/12 mr-10 text-center md:text-left mt-12 md:mt-0 order-2 md:order-1">
+             <img src="logo.png" alt="logo" class="logo h-10 md:h-10 object-contain mb-8 mx-auto md:mx-0 md:mr-auto">
+             <p>PiggyVest <a href="#">(formerly piggybank.ng)</a> is the largest online savings & investing platform in Nigeria. <br>
+              For over 4 years, our customers have saved and invested billions of Naira that they would normally be tempted to spend.</p>
+              <p>Office: Tesmot House, 3 Abdulrahman Okene Close, off Ligali Ayorinde Street, Victoria Island, Lagos.
+              <a href="#">0700 933 933 933 (Mon-Fri from 9am-5pm)</a> - <a href="#"> contact@piggyvest.com</a></p>
+               <p class="text-sm">© 2016 - 2020 PiggyTech Global Limited - RC 1405222</p>
+         </div>
+         <div class="flex w-8/12 md:w-4/12 justify-between mx-auto order-1 md:order-2">
+            <div class="blk flex flex-col mr-8">
+                <h2 class="text-gray-700 font-semibold text-lg mb-5">Quick Links</h2>
+                <a href="#">AutoSave™</a>
+                <a href="#">PiggyLink</a>
+                <a href="#">Quick Save™</a>
+                <a href="#">SafeLock™</a>
+                <a href="#">Withdrawals & Breaking</a>
+                <a href="#">Salary Management</a>
+            </div>
+            <div class="blk flex flex-col">
+               <h2 class="text-gray-700 font-semibold text-lg mb-5">COMPANY</h2>
+               <a href="#">About</a>
+               <a href="#">FAQs</a>
+               <a href="#">Terms of Use</a>
+               <a href="#">Privacy Policy</a>
+               <div class="flex mt-3 company justify-between text-white items-center"><i class="fa fa-facebook rounded-full bg-blue-800 px-2 py-1"></i> <i class="fa fa-twitter rounded-full bg-blue-800 px-1 py-1"></i> <i class="fa fa-instagram rounded-full bg-red-600 px-1 py-1"></i></div>
+            </div>
+         </div>
+         
+     </div>
+    <script src="calc.js"></script>
+  </body>
+</html>
