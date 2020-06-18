@@ -54,6 +54,7 @@ $(".interest").click(function(e){
     else{
     gain=(days/365)*interest*amount;
     $(".output").removeClass("hidden");
+    $(".output").addClass("animate__animated");
     $("#interest1").text(gain.toFixed(3));
     $("#amount1").text(amount);
     $("#invest").text(amount);}

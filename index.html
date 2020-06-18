@@ -6,26 +6,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="calc.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Calculator</title>
   </head>
   <body>
-      <div class="w-5/12 p-5 output text-center mx-auto hidden">
-           <img src="logo.png" alt="logo" class="h-16 mx-auto">
-           <div class="disp">
-               <i class="fa fa-times fa-2x ml-auto" id="cancel"></i>
-                <div>
-                <p>You get an interest of</p>
-                <h1 id="interest1" class="font-semibold text-3xl mt-5"></h1>
-                <p>on</p>
-                <h1 id="invest" class="font-semibold text-3xl mb-5 text-green-700"></h1>
-                </div>
-                <div class="btn">
-                    <button type="button"> SAFE LOCK #<span id="amount1" class="text-green-900"></span> NOW</button>
-                </div>
-           </div>
-      </div>
   <nav class="flex flex-col items-left justify-between border lg:flex-row px-5 py-3 md:py-0 md:px-10 lg:px-16">
       <div class="flex mr-6 justify-between w-full lg:w-auto items-center">
         <img src="logo.png" alt="logo" class="logo h-12 md:h-16">
@@ -52,13 +38,28 @@
         <div class="flex flex-col md:flex-row">
             <div class="w-full md:w-5/12 mb-10 md:mb-0 img-cont"></div>
             <div class="w-full md:w-6/12 md:ml-auto">
+                <div class="w-10/12 md:w-4/12 p-5 output text-center mx-auto animate__slideInRight hidden">
+                    <img src="logo.png" alt="logo" class="h-16 mx-auto">
+                    <div class="disp">
+                        <i class="fa fa-times fa-2x ml-auto" id="cancel"></i>
+                         <div>
+                         <p>You get an interest of</p>
+                         <h1 id="interest1" class="font-semibold text-3xl mt-5"></h1>
+                         <p>on</p>
+                         <h1 id="invest" class="font-semibold text-3xl mb-5 text-green-700"></h1>
+                         </div>
+                         <div class="btn">
+                             <button type="button"> SAFE LOCK #<span id="amount1" class="text-green-900"></span> NOW</button>
+                         </div>
+                    </div>
+               </div>
                 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative alert hidden" role="alert">
                     <strong class="font-bold">!!!</strong>
                     <span class="block sm:inline">Input an Amout</span>
                     <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                      <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                    <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                     </span>
-                  </div>
+               </div>
                <label for="amount" class="block">Amount to lock/Invest</label>
                <input type="text" id="amount" placeholder="25000">
                <label for="Title" class="block mt-5">Title of SafeLock</label>
