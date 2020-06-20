@@ -138,13 +138,29 @@ nav{
       display: block;
   }
   div.output{
-    background: #6190E8;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 450px;
-    position: absolute;
+    background: rgba(38, 142, 160, 0.637);
+    box-shadow: 0 3px 8px rgba(0,0,0,.1);
     z-index: 10;
+    position: fixed;
+    height: 100%;
+    opacity: 95%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all .3s ease-in-out;
   }
+  
+.hide{
+	transform: translateX(100%);
+	overflow-x: hidden;
+  display: flex;
+}
+
+.show{
+	transform: translateX(0%);
+	display: flex;
+}
   div.disp{
       padding: 30px;
       display: flex;
@@ -158,8 +174,8 @@ nav{
   }
  .output button{
     display:inline-block;
-    margin:1rem 0;
-    padding:0.8rem 1rem;
+    margin: 0 auto;
+    padding: 10px;
     width:80%;
     cursor:pointer;
     border:none;
@@ -168,6 +184,19 @@ nav{
     color:white;
     transition:all 500ms ease;
   }
+  .done{
+    padding: 10px 20px;
+    background-color:blue;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+  }
+  .done:hover{
+    background-color:white;
+    color:  #083E9E;
+    border: 1px  #083E9E solid;
+  }
+
   .output button:focus{
     outline:none;
   }
@@ -176,9 +205,14 @@ nav{
     background:#2296ff ;
   }
   
+  #error{
+    color: tomato;
+    margin: 10px 0;
+  }
   .dropdown{
       border-radius: 10px;
-      background: rgb(241, 238, 230);
+      background: rgba(0, 136, 204, 0.08);
+      cursor: pointer;
   }
 
   .dropdown p{
@@ -197,4 +231,13 @@ nav{
     border: solid 1px blue;
     outline: none;
     background-color: rebeccapurple;
+  }
+  div.thanks.output{
+    background-image: url(bank.jpg);
+    background-color:rgba(38, 142, 160, 0.637);
+    padding: 10px;
+    background-size:90% 60%;
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    opacity: 95%;
   }
