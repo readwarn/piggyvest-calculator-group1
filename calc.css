@@ -138,12 +138,11 @@ nav{
       display: block;
   }
   div.output{
-    background: rgba(38, 142, 160, 0.637);
+    background: rgba(38, 142, 160);
     box-shadow: 0 3px 8px rgba(0,0,0,.1);
     z-index: 10;
     position: fixed;
     height: 100%;
-    opacity: 95%;
     left: 0;
     right: 0;
     top: 0;
@@ -234,10 +233,9 @@ nav{
   }
   div.thanks.output{
     background-image: url(bank.jpg);
-    background-color:rgba(38, 142, 160, 0.637);
+    background-color:rgba(38, 142, 160);
     padding: 10px;
     background-size:90% 60%;
     background-repeat: no-repeat;
     background-position: 50% 70%;
-    opacity: 95%;
   }
